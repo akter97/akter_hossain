@@ -1,0 +1,370 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent-color: #00f2fe;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+    --wa-green: #25D366;
+    --wa-dark: #075E54;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Button */
+.btn-main {
+    background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+    border: none;
+    color: #000;
+    font-weight: 700;
+    padding: 12px 35px;
+    border-radius: 50px;
+}
+
+/* Cursor Dot */
+#cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color);
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* WhatsApp Floating */
+#wa-floating-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--wa-green);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Chat Box */
+#wa-interface {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 350px;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Chat Header */
+.chat-header {
+    background: var(--wa-dark);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chat Body */
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Messages */
+.msg {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.msg.received {
+    background: #f1f1f1;
+    align-self: flex-start;
+}
+
+.msg.sent {
+    background: #dcf8c6;
+    align-self: flex-end;
+}
+
+/* Footer */
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.chat-input {
+    flex: 1;
+    border-radius: 25px;
+    padding: 8px;
+}
+
+
+
+
+
+
+/* =========================
+   PREMIUM NAVBAR DESIGN
+========================= */
+
+.premium-navbar {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    padding: 18px 0;
+    transition: 0.4s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Scroll Effect */
+.premium-navbar.scrolled {
+    background: linear-gradient(90deg, #0f172a, #1e293b);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 12px 0;
+}
+
+/* Logo */
+.brand-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white !important;
+    letter-spacing: 2px;
+}
+
+.brand-logo span {
+    color: #00f2fe;
+}
+
+/* Nav Links */
+.nav-hover {
+    position: relative;
+    font-weight: 600;
+    color: #cbd5e1 !important;
+    transition: 0.3s ease;
+}
+
+.nav-hover::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: linear-gradient(90deg,#00f2fe,#4facfe);
+    transition: 0.4s ease;
+}
+
+.nav-hover:hover {
+    color: white !important;
+}
+
+.nav-hover:hover::after {
+    width: 100%;
+}
+
+/* Hire Me Button */
+.nav-btn {
+    background: linear-gradient(45deg,#00f2fe,#4facfe);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    color: #000 !important;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    box-shadow: 0 0 15px rgba(0,242,254,0.6);
+    transform: scale(1.05);
+}
+
+/* Custom Mobile Toggler */
+.custom-toggler {
+    border: none;
+    outline: none;
+}
+
+.custom-toggler span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #00f2fe;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Mobile Menu Styling */
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background: #0f172a;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .nav-hover {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .nav-btn {
+        display: inline-block;
+        margin-top: 15px;
+    }
+}
+
+
+
+/* Hero Animation Styling */
+/* Hero */
+.hero-section {
+    padding: 150px 0 50px;
+    min-height: 80vh;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #fff, var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+ 
+
+.cursor {
+    animation: blink 0.8s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.hero-buttons {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.hero-buttons.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.skill-badge {
+    background: rgba(0, 242, 254, 0.1);
+    color: #00f2fe;
+    padding: 6px 18px;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 4px 4px;
+    font-weight: 600;
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    transition: transform 0.3s;
+    cursor: default;
+}
+
+.skill-badge:hover {
+    transform: scale(1.1);
+}
+
+.unique-card {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border-radius: 20px;
+    padding: 30px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0,242,254,0.1);
+}
+
+.unique-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(60deg, rgba(0,242,254,0.2), rgba(255,255,255,0.05), rgba(0,242,254,0.2));
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.unique-card:hover::before {
+    top: -20%;
+    left: -20%;
+    transform: rotate(25deg);
+}
+
+.unique-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,242,254,0.2);
+}
+
+.unique-card h5 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #00f2fe;
+}
+
+.unique-card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.custom-card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 40px 30px;
+    color: #f8fafc;
+    box-shadow: 0 10px 30px rgba(0, 242, 254, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.2);
+}
+
+.text-dim {
+    color: #94a3b8;
+}
+
+.custom-card a:hover {
+    color: #00f2fe;
+}
