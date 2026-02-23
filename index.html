@@ -88,14 +88,11 @@
                        download
                        class="btn btn-main">
                         Download Resume
-                    </a>
-
-                     
-                         <a href="tel:01774865505" class="btn btn-outline-light rounded-pill px-4" id="contactBtn">
-    Contact Me
-</a> 
+                    </a>                    
+                         <a href="tel:01774865505" class="btn btn-outline-light rounded-pill px-4" id="contactBtn">Contact Me</a> 
                 </div>
-
+              
+                
             </div>
 
             <!-- Right Image -->
@@ -103,7 +100,7 @@
                 <img src="./Images/giftimage/programeer thinking.gif"
                      alt="Thinking"
                      class="img-fluid hero-img">
-            </div>
+            </div> 
 
         </div>
     </div>
@@ -310,8 +307,42 @@
 </a>
             </div>
 
+               <div class="d-flex flex-wrap gap-2 justify-content-center mt-4">
+                <a  class="btn btn-outline-light rounded-pill px-4" onclick="loadContent('career')">My Career Growth</a>
+                <a class="btn btn-outline-light rounded-pill px-4" onclick="loadContent('skills')">Latest Development Skill</a>
+                <a  class="btn btn-outline-light rounded-pill px-4" onclick="loadContent('philosophy')">My Philosophy</a>
+                <a class="btn btn-outline-light rounded-pill px-4" onclick="loadContent('contact')">Why Contact</a>
+                <a class="btn btn-outline-light rounded-pill px-4" onclick="loadContent('choose')">Why Choose Me</a>
+                <a class="btn btn-outline-light rounded-pill px-4" onclick="loadContent('advice')">Advice For Beginner</a>
+            </div>
+
         </div>
     </div>
+</section>
+<!-- Partial content will load here -->
+ <div class="container">
+<div id="content" class="mt-4 ; " style="display: none;">
+    <p>Select a section to view content.</p>
+</div>
+</div>
+ <section>
+    <footer style=" 
+         background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    ">
+        <p style="margin: 0; font-size: 0.95rem;">
+            © 2019 - 2026 <strong>Akter Hossain</strong>, All Rights Reserved.
+        </p>
+        <p style="margin: 5px 0 0; font-size: 0.8rem; color: #dcdcdc;">
+            Designed & Developed with ❤️
+        </p>
+    </footer>
 </section>
 
 <!-- JS -->
@@ -406,8 +437,211 @@ document.addEventListener("keyup", function(e){
     }
 });
 
+ 
+<!-- Partial content will load here -->
+ 
+function loadContent(section) {
+    const content = document.getElementById('content');
+    content.style.display='block';
+    switch(section) {
+        case 'career':
+             case 'career':
+            content.innerHTML = `
+                <h2>My Career Growth</h2>
+                <p>I started my software development journey focusing on web and ERP systems. Over time, I have gained expertise in:</p>
+                <ul>
+                    <li>ERP modules development using ASP.NET Core and Angular</li>
+                    <li>Full-stack web and mobile application development</li>
+                    <li>Database design and optimization (SQL Server, MySQL)</li>
+                    <li>RESTful API integration and backend services</li>
+                    <li>Crystal Reports for professional reporting</li>
+                    <li>Angular, Flutter, and modern frontend technologies</li>
+                </ul>
+                <p>Along the way, I have worked on enterprise projects like WCL Billing & Accounting, Alex Mobile Mechanic App, and more, gaining hands-on experience in problem-solving, debugging, and delivering production-ready applications.</p>
+            `;
+            break;
+        case 'skills':
+           
+              content.innerHTML = `
+            <h2>My Programming Skills</h2>
+            <div class="mb-3">
+                <label>HTML</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>CSS</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Bootstrap</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Angular</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%">80%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>ASP.NET</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%">80%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>Flutter</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 40%">40%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>SQL Server</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%">90%</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label>MySQL</label>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%">60%</div>
+                </div>
+            </div>
+        `;
+            break;
+        case 'philosophy':
+            content.innerHTML = `
+                <h2>My Philosophy</h2>
+                <p>As a software developer, I believe in continuous learning, problem-solving, and delivering quality solutions. My approach is:</p>
+                <ul>
+                    <li><strong>Continuous Learning:</strong> Technology evolves fast; I always update my skills to stay relevant.</li>
+                    <li><strong>Clean Code:</strong> Writing readable, maintainable, and efficient code is my priority.</li>
+                    <li><strong>Practical Problem Solving:</strong> I focus on understanding the business needs and providing effective solutions.</li>
+                    <li><strong>Collaboration:</strong> Working closely with clients and teams ensures the best outcomes.</li>
+                    <li><strong>Adaptability:</strong> I embrace new tools and frameworks to deliver modern and robust applications.</li>
+                </ul>
+                <p>In short, my philosophy is: <em>“Learn, Apply, Improve, Deliver.”</em></p>
+            `;
+            break;
+        case 'contact': 
+            content.innerHTML = `
+                <h2>Why Contact Me</h2>
+                <p>If you are looking for a dedicated, skilled, and solution-oriented developer, here’s why you should reach out:</p>
+                <ul>
+                    <li><strong>Expertise:</strong> I have hands-on experience in ASP.NET Core, Angular, Flutter, SQL, and full-stack development.</li>
+                    <li><strong>Problem-Solving:</strong> I focus on understanding your requirements and delivering efficient, practical solutions.</li>
+                    <li><strong>Reliable & Professional:</strong> I deliver projects on time, maintain clear communication, and ensure high-quality standards.</li>
+                    <li><strong>Custom Solutions:</strong> I adapt to client needs and provide tailored solutions that match your business goals.</li>
+                    <li><strong>Continuous Support:</strong> Beyond delivery, I provide assistance and improvements whenever necessary.</li>
+                </ul>
+                <p>In short: <em>“Contact me for reliable, efficient, and modern software solutions.”</em></p>
+            `;
+            break;
+          case 'choose':
+            content.innerHTML = `
+                <h2>Why Choose Me</h2>
+                <p>Choosing the right developer can make a huge difference in your project. Here’s why I stand out:</p>
+                <ul>
+                    <li><strong>Full-Stack Expertise:</strong> Strong skills in ASP.NET Core, Angular, Flutter, SQL, and frontend technologies.</li>
+                    <li><strong>Problem-Solving Mindset:</strong> I analyze challenges and provide practical, efficient solutions.</li>
+                    <li><strong>Reliability:</strong> I deliver projects on time with quality and maintain clear communication throughout.</li>
+                    <li><strong>Adaptability:</strong> I quickly adapt to new tools, frameworks, and project requirements.</li>
+                    <li><strong>Client-Focused Approach:</strong> I prioritize your business goals and customize solutions accordingly.</li>
+                </ul>
+                <p>In short: <em>“Choose me for professional, reliable, and modern software solutions.”</em></p>
+            `;
+            break;
+        case 'advice': 
+            content.innerHTML = `
+                <h2>Advice For Beginner (6-Month Full Guide)</h2>
+                <p>This guide is designed to help beginners become proficient in web and software development over 6 months. Focus on learning step by step and practicing regularly.</p>
+
+                <!-- Month Buttons -->
+                <div class="d-flex flex-wrap gap-2 my-3">
+                    <button class="btn btn-outline-primary" onclick="loadMonthAdvice(1)">Month 1</button>
+                    <button class="btn btn-outline-primary" onclick="loadMonthAdvice(2)">Month 2</button>
+                    <button class="btn btn-outline-primary" onclick="loadMonthAdvice(3)">Month 3</button>
+                    <button class="btn btn-outline-primary" onclick="loadMonthAdvice(4)">Month 4</button>
+                    <button class="btn btn-outline-primary" onclick="loadMonthAdvice(5)">Month 5</button>
+                    <button class="btn btn-outline-primary" onclick="loadMonthAdvice(6)">Month 6</button>
+                </div>
+
+                <!-- Month content container -->
+                <div id="month-content" class="mt-3">
+                    <p>Select a month to see detailed guidance.</p>
+                </div>
+            `; 
+            break;
+        default:
+            content.innerHTML = "<p>Select a section to view content.</p>";
+    }
+}
+
+function loadMonthAdvice(month) {
+    const monthContent = document.getElementById('month-content');
+    let text = '';
+
+    switch(month) {
+        case 1:
+            text = `<h4>Month 1: Basics & Foundations</h4>
+                    <ul>
+                        <li>Learn HTML, CSS basics and structure of web pages.</li>
+                        <li>Practice creating simple static websites.</li>
+                        <li>Understand developer tools in the browser.</li>
+                    </ul>`;
+            break;
+        case 2:
+            text = `<h4>Month 2: Advanced HTML/CSS & Bootstrap</h4>
+                    <ul>
+                        <li>Learn responsive design using Bootstrap.</li>
+                        <li>Practice building multi-page websites.</li>
+                        <li>Understand CSS Flexbox and Grid layout.</li>
+                    </ul>`;
+            break;
+        case 3:
+            text = `<h4>Month 3: JavaScript Fundamentals</h4>
+                    <ul>
+                        <li>Learn JS syntax, variables, loops, and functions.</li>
+                        <li>Practice DOM manipulation.</li>
+                        <li>Understand events and simple interactivity.</li>
+                    </ul>`;
+            break;
+        case 4:
+            text = `<h4>Month 4: Frontend Framework (Angular)</h4>
+                    <ul>
+                        <li>Learn Angular components, modules, and routing.</li>
+                        <li>Create small SPA projects.</li>
+                        <li>Integrate basic REST APIs.</li>
+                    </ul>`;
+            break;
+        case 5:
+            text = `<h4>Month 5: Backend Basics (ASP.NET Core)</h4>
+                    <ul>
+                        <li>Learn C# basics and OOP concepts.</li>
+                        <li>Create simple ASP.NET Core Web API.</li>
+                        <li>Connect with SQL Server or MySQL databases.</li>
+                    </ul>`;
+            break;
+        case 6:
+            text = `<h4>Month 6: Full-Stack Practice & Projects</h4>
+                    <ul>
+                        <li>Build a full-stack project (Angular + ASP.NET Core + SQL Server).</li>
+                        <li>Implement CRUD, authentication, and REST API integration.</li>
+                        <li>Focus on deployment, debugging, and performance optimization.</li>
+                    </ul>`;
+            break;
+        default:
+            text = `<p>Select a month to see detailed guidance.</p>`;
+    }
+
+    monthContent.innerHTML = text;
+}
+
 </script>
-
-
 </body>
 </html>
